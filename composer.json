@@ -15,7 +15,8 @@
         "laravel/ui": "^1.0",
         "maatwebsite/excel": "^3.1",
         "nesbot/carbon": "^2.24",
-        "spatie/laravel-cors": "^1.6"
+        "spatie/laravel-cors": "^1.6",
+        "tymon/jwt-auth": "dev-develop"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

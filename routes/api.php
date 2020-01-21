@@ -17,6 +17,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::post('auth', 'Auth\AuthApiController@authenticate');
+Route::post('auth-refresh', 'Auth\AuthApiController@refreshToken');
+Route::get('me', 'Auth\AuthApiController@getAuthenticatedUser');
+
 Route::get('balances', 'Api\BalanceController@index');
 
 Route::get('transactions', 'Api\TransactionController@index');
