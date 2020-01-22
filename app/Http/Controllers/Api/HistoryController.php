@@ -4,20 +4,22 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Balance;
+use App\Models\Service;
 
-class BalanceController extends Controller
+class HistoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Balance $balance)
+    public function index(Service $service)
     {
-        $balances = $balance->find(1);
+        $user = auth()->user();
 
-        return $balances;
+        $services = $service->where('car_id', $user->car_id)->with('client')->get();
+
+        return response()->json($services);
     }
 
     /**
