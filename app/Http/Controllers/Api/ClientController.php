@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Transaction;
+use App\Models\Client;
 
-class TransactionController extends Controller
+class ClientController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Transaction $transaction)
+    public function index(Client $clients)
     {
-        $transactions = $transaction->get();
+        $clients = $clients->get();
 
-        return $transactions;
+        return response()->json($clients, 200);
     }
 
     /**

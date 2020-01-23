@@ -14,6 +14,7 @@ use Illuminate\Http\Request;
 */
 Route::group(['namespace' => 'Api', 'middleware' => ['api', 'auth:api']], function () {
     Route::get('history', 'HistoryController@index');
+    Route::get('clients', 'ClientController@index');
 });
 Route::get('me', 'Auth\AuthApiController@getAuthenticatedUser');
 
