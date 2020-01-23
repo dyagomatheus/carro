@@ -15,8 +15,9 @@ use Illuminate\Http\Request;
 Route::group(['namespace' => 'Api', 'middleware' => ['api', 'auth:api']], function () {
     Route::get('history', 'HistoryController@index');
     Route::get('clients', 'ClientController@index');
+    Route::get('mycar', 'CarController@index');
+    Route::get('me', 'Auth\AuthApiController@getAuthenticatedUser');
 });
-Route::get('me', 'Auth\AuthApiController@getAuthenticatedUser');
 
 Route::post('auth', 'Auth\AuthApiController@authenticate');
 Route::post('auth-refresh', 'Auth\AuthApiController@refreshToken');

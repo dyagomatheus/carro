@@ -4,22 +4,22 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Service;
+use App\Models\Car;
 
-class HistoryController extends Controller
+class CarController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Service $service)
+    public function index(Car $car)
     {
         $user = auth()->user();
 
-        $services = $service->where('car_id', $user->car_id)->with('client.services', 'performeds', 'car')->get();
+        $car = $user->with('car')->first();
 
-        return response()->json($services);
+        return response()->json($car);
     }
 
     /**

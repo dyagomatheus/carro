@@ -19,6 +19,7 @@ class CreateServicesTable extends Migration
             $table->foreign('car_id')->references('id')->on('cars')->onDelete('cascade');
             $table->unsignedBigInteger('client_id')->nullable();
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
+            $table->string('current_km', 100)->nullable();
             $table->timestamps();
         });
     }

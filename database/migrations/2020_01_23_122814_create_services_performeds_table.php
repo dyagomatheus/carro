@@ -15,7 +15,6 @@ class CreateServicesPerformedsTable extends Migration
     {
         Schema::create('services_performeds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('current_km', 100)->nullable();
             $table->string('warranty', 100)->nullable();
             $table->longText('description')->nullable();
             $table->unsignedBigInteger('service_id')->nullable();
