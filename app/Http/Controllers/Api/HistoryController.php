@@ -17,7 +17,7 @@ class HistoryController extends Controller
     {
         $user = auth()->user();
 
-        $services = $service->where('car_id', $user->car_id)->with('client')->get();
+        $services = $service->where('car_id', $user->car_id)->with('client.services', 'performeds')->get();
 
         return response()->json($services);
     }

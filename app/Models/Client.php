@@ -10,4 +10,9 @@ class Client extends Model
         'social_name', 'fantasy_name', 'cnpj', 'code', 'telephone', 'zipcode', 'street', 'number', 'complement', 'district', 'city', 'state', 'status'
     ];
 
+    public function services()
+    {
+        return $this->hasMany('App\Models\Service');
+    }
+
 }
