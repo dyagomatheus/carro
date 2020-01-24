@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
+use App\Models\ServicePerformed;
 
 class HistoryController extends Controller
 {
@@ -27,9 +28,15 @@ class HistoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function notifications(ServicePerformed $performed)
     {
-        //
+        $user = auth()->user();
+        $date = getdate();
+
+        $performeds = $performed->whereMonth('return_date', $date['mon'])->whereYear('return_date', $date['year'])
+        ->with('service.client', 'service.car')->get();
+
+        return response()->json($performeds, 200);
     }
 
     /**

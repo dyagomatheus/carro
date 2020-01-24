@@ -15,7 +15,8 @@ class CreateServicesPerformedsTable extends Migration
     {
         Schema::create('services_performeds', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('warranty', 100)->nullable();
+            $table->integer('warranty')->nullable();
+            $table->date('return_date')->nullable();
             $table->longText('description')->nullable();
             $table->unsignedBigInteger('service_id')->nullable();
             $table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');

@@ -35,7 +35,7 @@ class CreateUsersTable extends Migration
             array(
                 'name' => 'Administrador',
                 'email' => 'admin@admin.com',
-                'code' => 'CARROCERTO',
+                'code' => '123456789',
                 'password' => Hash::make('12345'),
                 'created_at' => date('Y-m-d H:i:s'),
                 'updated_at' => date('Y-m-d H:i:s'),

@@ -6,11 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class ServicePerformed extends Model
 {
-    protected $fillable = ['car_id', 'description'];
+    protected $fillable = ['warranty', 'description', 'service_id'];
     protected $table = 'services_performeds';
 
-    public function client()
+    public function service()
     {
-        return $this->belongsTo('App\Models\Client');
+        return $this->belongsTo('App\Models\Service');
     }
 }

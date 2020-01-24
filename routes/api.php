@@ -16,6 +16,8 @@ Route::group(['namespace' => 'Api', 'middleware' => ['api', 'auth:api']], functi
     Route::get('history', 'HistoryController@index');
     Route::get('clients', 'ClientController@index');
     Route::get('mycar', 'CarController@index');
+    Route::get('notifications', 'HistoryController@notifications');
+
     Route::get('me', 'Auth\AuthApiController@getAuthenticatedUser');
 });
 
