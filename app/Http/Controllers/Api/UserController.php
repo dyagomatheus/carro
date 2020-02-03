@@ -83,7 +83,7 @@ class UserController extends Controller
         $user = User::find($id);
 
         if(isset($request->password)){
-          $user->password = $request->password;
+          $user->password = bcrypt($request->password);
           $user->email = $request->email;
           $user->name = $request->name;
           $user->save();
