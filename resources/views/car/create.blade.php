@@ -15,12 +15,12 @@
                         @csrf
                         <h4>Dados do Veículo</h4>
                         <div class="form-group row">
-                            <label for="board" class="col-md-4 col-form-label text-md-right">{{ __('Placa') }}</label>
+                            <label for="chassis" class="col-md-4 col-form-label text-md-right">{{ __('Chassi') }}</label>
 
                             <div class="col-md-6">
-                                <input id="board" type="text" class="form-control @error('board') is-invalid @enderror" name="board" value="{{ old('board') }}" required autocomplete="board" autofocus>
+                                <input id="chassis" type="text" class="form-control @error('chassis') is-invalid @enderror" name="chassis" value="{{ old('chassis') }}" required autocomplete="chassis" autofocus>
 
-                                @error('board')
+                                @error('chassis')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

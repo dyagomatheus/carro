@@ -7,39 +7,39 @@
             <div class="spur-card-icon">
                 <i class="fas fa-users"></i>
             </div>
-            <div class="spur-card-title">Lista de Carros</div>
-        <a href="{{route('car.create')}}" class="btn btn-success ml-5">Novo</a>
+            <div class="spur-card-title">Carro</div>
+        <a href="{{route('service.create')}}" class="btn btn-primary ml-5">Voltar</a>
         </div>
-        @if(count($cars) > 0)
+        @if($car)
         <div class="card-body ">
             <table class="table table-hover table-in-card">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
-                        <th scope="col">Modelo</th>
                         <th scope="col">Chassi</th>
+                        <th scope="col">Modelo</th>
+                        <th scope="col">Cor</th>
                         <th scope="col">Ano</th>
-                        <th scope="col">Ações</th>
+                        <th scope="col">Ação</th>
+
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($cars as $car)
                     <tr>
                         <th scope="row">{{$car->id}}</th>
-                        <td>{{$car->model}}</td>
                         <td>{{$car->chassis}}</td>
+                        <td>{{$car->model}}</td>
+                        <td>{{$car->color}}</td>
                         <td>{{$car->year}}</td>
-                    <td>
-                        <a href="{{route('car.edit', $car->id)}}" class="btn btn-warning">Editar</a>
-                        <a href="{{route('car.delete', $car->id)}}" class="btn btn-danger">Deletar</a>
-                    </td>
+                        <td>                        
+                          <a href="{{route('services.performed', $car->id)}}" class="btn btn-primary">Realizar Serviço</a>
+                      </td>                    
                     </tr>  
-                    @endforeach
                 </tbody>
             </table>
         </div>
         @else
-        <span class="alert alert-info mt-2"> Nenhum carro cadastrado. <a href="{{route('car.create')}}"> Cadastre o primeiro</a></span>
+        <span class="alert alert-info mt-2"> Nenhum carro encontrado. <a href="{{route('service.create')}}"> Procurar outro</a></span>
         @endif
     </div>
 </div>

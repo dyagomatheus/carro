@@ -30,14 +30,14 @@ class CarController extends Controller
 
         $user = User::create([
             'car_id' => $car->id,
-            'code' => $car->board,
+            'code' => $car->chassis,
             'code_two' => null,
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
-            'admin' => false
+            'admin' => 2
         ]);
 
         return redirect()->route('car.index')->with('success', 'Carro cadastrado com sucesso');

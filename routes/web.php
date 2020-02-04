@@ -51,7 +51,11 @@ Route::resource('user', 'UserController')->middleware(['check.admin']);
 Route::resource('car', 'CarController');
 Route::get('car/delete/{id}', 'CarController@destroy')->name('car.delete')->middleware(['check.admin']);
 
+//services
 Route::resource('service', 'ServiceController');
+Route::post('service/search', 'ServiceController@searchCar')->name('services.searchCar');
+Route::get('service/performed/car/{id}', 'ServiceController@performed')->name('services.performed');
+
 Route::resource('sale', 'SaleController');
 Route::post('sale/create', 'SaleController@create')->name('sale.create');
 Route::get('sale/show/{id}', 'SaleController@show')->name('sale.show');

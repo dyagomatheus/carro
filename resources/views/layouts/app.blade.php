@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="{{asset('/css/style.css')}}">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.bundle.min.js"></script>
     <script src="{{asset('/js/chart-js-config.js')}}"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.2.2.min.js"></script>
+
     <title>Carro Certo</title>
 </head>
 
@@ -44,29 +46,33 @@
                 <a href="{{route('user.profile')}}" class="dash-nav-item">
                         <i class="fas fa-user-circle"></i> Meus Dados
                 </a>
-                @if(auth()->user()->admin == true)
+                @if(auth()->user()->admin == 1)
                 <a href="{{route('user.index')}}" class="dash-nav-item">
                     <i class="fas fa-users"></i> Usuários
                 </a>
-
                 <a href="{{route('client.index')}}" class="dash-nav-item">
                     <i class="fas fa-store"></i> Clientes
                 </a>
                 <a href="{{route('car.index')}}" class="dash-nav-item">
                     <i class="fas fa-car"></i> Veículos
                 </a>
-                <div class="dash-nav-dropdown">
+                @else
+                @if(auth()->user()->admin == 0)
+                <a href="{{route('car.create')}}" class="dash-nav-item">
+                    <i class="fas fa-car"></i> Veículos
+                </a>
+                <a href="{{route('service.index')}}" class="dash-nav-item">
+                    <i class="fas fa-wrench"></i> Serviços
+                </a>
+                @endif
+                {{-- <div class="dash-nav-dropdown">
                     <a href="#!" class="dash-nav-item dash-nav-dropdown-toggle">
                         <i class="fas fa-hand-holding-usd"></i> Lançamentos </a>
                     <div class="dash-nav-dropdown-menu">
                         <a href="{{route('transaction.create')}}" class="dash-nav-dropdown-item">Vendas</a>
                         <a href="{{route('transaction.debit')}}" class="dash-nav-dropdown-item">Débito</a>
                     </div>
-                </div>
-                @else
-                <a href="" class="dash-nav-item">
-                        <i class="fas fa-hands-helping"></i> Avalie o App
-                    </a>
+                </div> --}}
                     <a href="" class="dash-nav-item">
                         <i class="fas fa-info-circle"></i> Institucional
                     </a>

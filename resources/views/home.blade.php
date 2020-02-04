@@ -3,33 +3,6 @@
 @section('content')
 <div class="container-fluid">
         <div class="row dash-row">
-        @if(auth()->user()->admin == false)
-            <div class="col-6">
-                <a href="{{route('user.profile')}}" class="btn btn-light">
-                    <i class="fas fa-user-circle fa-5x"></i>
-                    <h6>Meus Dados</h6>
-                </a>
-            </div>
-            <div class="col-6">
-                <a href="" class="btn btn-light">
-                    <i class="fas fa-wrench fa-5x"></i>
-                    <h6>Manutenção</h6>
-                </a>
-            </div>
-            <div class="col-6 mt-4">
-                <a href="" class="btn btn-light">
-                    <i class="fas fa-calendar-alt fa-5x"></i>
-                    <h6>Agendamento</h6>
-                </a>
-            </div>
-            <div class="col-6 mt-4">
-            <a href="{{route('car.show', auth()->user()->car['id'])}}" class="btn btn-light">
-                    <i class="fas fa-history fa-5x"></i>
-                    <h6>Histórico</h6>
-                </a>
-            </div>
-        </div>
-        @endif
         {{-- <div class="row">
                 <div class="col-lg-12">
                     <div class="card spur-card">

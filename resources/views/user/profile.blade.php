@@ -17,12 +17,27 @@
                     <form method="POST" action="{{ route('user.profile.update') }}">
                         @csrf
                         @method('PUT')
+                        @if(auth()->user()->admin == 2)
                         <div class="form-group row">
                         <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Carro') }}</label>
                             <div class="col-md-6">
                             <select name="client_id" id="client_id" class="form-control" disabled>
                                 <option disabled selected> {{auth()->user()->car['board']}} |  {{auth()->user()->car['model']}}</option>
                             </select>
+                            </div>
+                        </div>
+                        @endif
+                        <div class="form-group row">
+                            <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Código') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{auth()->user()->code}}" required autocomplete="code" autofocus disabled>
+
+                                @error('code')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                             </div>
                         </div>
                         <div class="form-group row">
