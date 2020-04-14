@@ -11,7 +11,7 @@ use App\User;
 use App\Http\Requests\StoreClient;
 use App\Mail\SendMailUser;
 
-class HomeController extends Controller
+class DashboardController extends Controller
 {
     public function index()
     {
