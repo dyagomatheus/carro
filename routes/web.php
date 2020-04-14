@@ -29,7 +29,7 @@ Auth::routes();
 
 Route::middleware(['auth'])->group(function () {
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'DashboardController@index')->name('home');
 Route::get('/sync', 'HomeController@balance')->name('sync.balance');
 
 Route::get('profile', 'UserController@profile')->name('user.profile');
