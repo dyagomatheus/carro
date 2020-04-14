@@ -27,6 +27,8 @@ class CreateTableClientsTable extends Migration
             $table->string('district')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
+            $table->string('responsible')->nullable();
+            $table->string('state_registration')->nullable();
             $table->integer('status')->nullable()->default(1);
             $table->timestamps();
         });

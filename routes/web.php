@@ -16,8 +16,14 @@ Route::get('/', function () {
 });
 
 Route::get('/register', function () {
-    return view('auth.login');
+    return view('cadastro-oficinas');
 });
+
+Route::get('/cadastro-oficinas', function () {
+    return view('cadastro-oficinas');
+});
+
+Route::post('/cadastro-oficinas', 'HomeController@store')->name('register.client');
 
 Auth::routes();
 

@@ -73,6 +73,16 @@
                                 <input type="text" class="form-control" id="state" name="state" placeholder="Piauí">
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Responsável</label>
+                                <input type="text" class="form-control" id="responsible" name="responsible" placeholder="Nome completo">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="inputState">Inscrição Estadual</label>
+                                <input type="text" class="form-control" id="state_registration" name="state_registration" placeholder="Inscrição SEFAZ">
+                            </div>
+                        </div>
                         {{-- <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck4">
