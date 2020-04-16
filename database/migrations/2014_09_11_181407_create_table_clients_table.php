@@ -29,7 +29,7 @@ class CreateTableClientsTable extends Migration
             $table->string('state')->nullable();
             $table->string('responsible')->nullable();
             $table->string('state_registration')->nullable();
-            $table->integer('status')->nullable()->default(1);
+            $table->integer('status')->nullable()->default(false);
             $table->timestamps();
         });
     }
