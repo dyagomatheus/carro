@@ -136,24 +136,31 @@
                     @endif               
 
                         <!--Contact Form-->
-                        <form id="contact-form" method="post" action="{{route('register.client')}}">
-                            @csrf
-                            <div class="row clearfix">
+                        <form id="contact-form" method="post" action="http://www.carrocertoapp.com.br/sistema/cadastro-oficinas">
+                            <input type="hidden" name="_token" value="wC4vAu0qFVQkQFjPCRsuopQxYupZjTKlYWGRuErM">                            <div class="row clearfix">
                                 
-                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                <div class="col-md-6 col-sm-12 col-xs-12">
                                     
                                     <div class="form-group">
                                         <label class="form-label">Razão Social</label>
                                         <input type="text" name="social_name" value="" required="">
                                     </div>
+
                                     <div class="form-group">
                                         <label class="form-label">Nome Empresarial</label>
                                         <input type="text" name="fantasy_name" value="" required="">
                                     </div>
+
                                     <div class="form-group">
                                         <label class="form-label">CNPJ</label>
                                         <input type="text" name="cnpj" value="" required="">
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Inscrição Estadual</label>
+                                        <input type="text" name="state_registration" value="" placeholder="Digite o número de sua inscrição no SEFAZ" required="">
+                                    </div>
+
                                     <div class="form-group">
                                         <label class="form-label">Usuário</label>
                                         <input type="text" name="code" value="" required="" placeholder="Seu usuário para usar o sistema">
@@ -167,22 +174,31 @@
                                         <label class="form-label">Telefone</label>
                                         <input type="text" name="telephone" value="" placeholder="Telefone com DDD" required="">
                                     </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Responsável</label>
+                                        <input type="text" name="responsible" value="" placeholder="Digite o nome completo" required="">
+                                    </div>
+
+
                                 </div>
 
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    <div class="form-group">
-                                        <label class="form-label">CEP</label>
-                                        <input type="text" name="zipcode" value="" required="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label">Número</label>
-                                        <input type="text" name="number" value="" required="">
-                                    </div>
+                                <div class="col-md-6 col-sm-12 col-xs-12">
+                                    
 
                                     <div class="form-group">
                                         <label class="form-label">Cidade</label>
                                         <input type="text" name="city" value="" required="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Estado</label>
+                                        <input type="text" name="state" value="" required="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">CEP</label>
+                                        <input type="text" name="zipcode" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -191,8 +207,8 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="form-label">Bairro</label>
-                                        <input type="text" name="district" value="" required="">
+                                        <label class="form-label">Número</label>
+                                        <input type="text" name="number" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -201,35 +217,17 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="form-label">Estado</label>
-                                        <input type="text" name="state" value="" required="">
+                                        <label class="form-label">Bairro</label>
+                                        <input type="text" name="district" value="" required="">
                                     </div>
+
+                                    
+
+                                    
                                     
                                 </div>
 
 
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    
-                                    <div class="clearfix"></div>
-                                    
-                                    <div class="form-group">
-                                        <label class="form-label">Responsável</label>
-                                        <input type="text" name="responsible" value="" placeholder="Digite o nome completo" required="">
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    
-                                    <div class="clearfix"></div>
-                                    
-
-                                    <div class="form-group">
-                                        <label class="form-label">Inscrição Estadual</label>
-                                        <input type="text" name="state_registration" value="" placeholder="Digite o número de sua inscrição no SEFAZ" required="">
-                                    </div>
-                                    
-                                </div>
                                 
                             </div>
                             
@@ -238,6 +236,7 @@
                             </div>
                             
                         </form>
+    
                             
                 	</div>
                     
