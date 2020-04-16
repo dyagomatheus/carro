@@ -20,4 +20,9 @@ class Client extends Model
         return $this->hasMany('App\Models\Schedule');
     }
 
+    public function user()
+    {
+        return $this->hasOne('App\User', 'client_id', 'id');
+    }
+
 }

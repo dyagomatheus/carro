@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use App\Models\Client;
+use App\Mail\SendMailUser;
 
 class ClientController extends Controller
 {
@@ -90,5 +92,25 @@ class ClientController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function active($id)
+    {
+        $client = Client::find($id);
+        $client->status = true;
+        $client->save();
+        // dd($client->user);
+        Mail::to([$client->user->email, 'sac@carrocertoapp.com.br'])->send(new SendMailUser($client->user, $client));
+
+        return redirect()->route('home')->with('success', 'Cliente ativado com sucesso');
+    }
+
+    public function deactive($id)
+    {
+        $client = Client::find($id);
+        $client->status = false;
+        $client->save();
+
+        return redirect()->route('home')->with('success', 'Cliente desativado com sucesso');
     }
 }

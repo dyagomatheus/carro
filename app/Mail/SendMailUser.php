@@ -31,7 +31,8 @@ class SendMailUser extends Mailable
      */
     public function build()
     {
-        return $this->from('sac@carrocertoapp.com.br')
+        return $this->subject('CARRO CERTO APP - SITUAÇÃO SOLICITAÇÃO DE CADASTRO')
+                    ->from('sac@carrocertoapp.com.br')
                     ->view('emails.welcome')
                     ->with([
                         'user' => $this->user,

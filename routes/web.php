@@ -53,6 +53,9 @@ Route::get('transaction/debit', 'TransactionController@debit')->name('transactio
 Route::post('transaction/debit/store', 'TransactionController@debitStore')->name('transaction.debitStore')->middleware(['check.admin']);
 
 Route::resource('client', 'ClientController')->middleware(['check.admin']);
+Route::get('client/active/{id}', 'ClientController@active')->middleware(['check.admin'])->name('client.active');
+Route::get('client/deactive/{id}', 'ClientController@deactive')->middleware(['check.admin'])->name('client.deactive');
+
 Route::resource('user', 'UserController')->middleware(['check.admin']);
 Route::resource('car', 'CarController');
 Route::get('car/delete/{id}', 'CarController@destroy')->name('car.delete')->middleware(['check.admin']);

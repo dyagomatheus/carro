@@ -15,6 +15,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-       return view('home');
+       $clients = Client::where('status', false)->get();
+
+       return view('home', compact('clients'));
     }
 }

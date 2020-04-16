@@ -122,7 +122,7 @@
 
                     @if(session('success'))
                         <div class="alert alert-success">
-                            <p>{{session('success')}}, <strong>Enviamos seus dados de acesso por e-mail.</strong> </p>
+                            <p>{{session('success')}}, <strong>Enviaremos um email em breve com seus dados de acesso.</strong> </p>
                         </div>
                     @endif
                     @if ($errors->any())
@@ -146,7 +146,14 @@
                                         <label class="form-label">Razão Social</label>
                                         <input type="text" name="social_name" value="" required="">
                                     </div>
-
+                                    <div class="form-group">
+                                        <label class="form-label">Nome Empresarial</label>
+                                        <input type="text" name="fantasy_name" value="" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">CNPJ</label>
+                                        <input type="text" name="cnpj" value="" required="">
+                                    </div>
                                     <div class="form-group">
                                         <label class="form-label">Usuário</label>
                                         <input type="text" name="code" value="" required="" placeholder="Seu usuário para usar o sistema">
@@ -156,30 +163,16 @@
                                         <label class="form-label">E-mail</label>
                                         <input type="text" name="email" value="" required="" placeholder="Informe um email válido">
                                     </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label">Rua</label>
-                                        <input type="text" name="street" value="" required="">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label class="form-label">Bairro</label>
-                                        <input type="text" name="district" value="" required="">
-                                    </div>
-                                    
-                                </div>
-
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    
-                                    
-                                    <div class="form-group">
-                                        <label class="form-label">Nome Empresarial</label>
-                                        <input type="text" name="fantasy_name" value="" required="">
-                                    </div>
-
                                     <div class="form-group">
                                         <label class="form-label">Telefone</label>
                                         <input type="text" name="telephone" value="" placeholder="Telefone com DDD" required="">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 col-sm-12 col-xs-12">
+                                    <div class="form-group">
+                                        <label class="form-label">CEP</label>
+                                        <input type="text" name="zipcode" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -191,22 +184,15 @@
                                         <label class="form-label">Cidade</label>
                                         <input type="text" name="city" value="" required="">
                                     </div>
-                                    
-                                </div>
 
-
-                                <div class="col-md-4 col-sm-12 col-xs-12">
-                                    
-                                    <div class="clearfix"></div>
-                                    
                                     <div class="form-group">
-                                        <label class="form-label">CNPJ</label>
-                                        <input type="text" name="cnpj" value="" required="">
+                                        <label class="form-label">Rua</label>
+                                        <input type="text" name="street" value="" required="">
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="form-label">CEP</label>
-                                        <input type="text" name="zipcode" value="" required="">
+                                        <label class="form-label">Bairro</label>
+                                        <input type="text" name="district" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -220,6 +206,7 @@
                                     </div>
                                     
                                 </div>
+
 
                                 <div class="col-md-4 col-sm-12 col-xs-12">
                                     

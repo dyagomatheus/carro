@@ -26,11 +26,9 @@ class HomeController extends Controller
             'password' => Hash::make('123456'),
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
-            'admin' => false
+            'admin' => false,
+            'status'=>false
         ]);
-
-        Mail::to([$user->email, 'sac@carrocertoapp.com.br'])->send(new SendMailUser($user, $client));
-
         return redirect('cadastro-oficinas')->with('success', 'Cliente cadastrado com sucesso');
     }
 }

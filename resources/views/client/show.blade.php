@@ -11,7 +11,7 @@
                     <div class="spur-card-title"> Visualizando Cliente </div>
                 </div>
                 <div class="card-body ">
-                        <h3>Lançamentos previstos: {{$client->balance->release}}</h3>
+                        {{-- <h3>Lançamentos previstos: {{$client->balance->release}}</h3> --}}
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Nome Social</label>
@@ -72,6 +72,10 @@
                                 <input type="text" value="{{$client->state}}"  class="form-control" id="state" name="state"  disabled>
                             </div>
                         </div>
+                        <hr>
+                        <a href="{{route('client.active', $client->id)}}" class="btn btn-primary mr-2" onclick="return confirm('Você tem certeza que deseja ACEITAR este cadastro?');">Aceitar</a>
+                        <a href="{{ URL::previous() }}">Voltar</a>
+
                         {{-- <div class="form-group">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="customCheck4">

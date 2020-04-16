@@ -1,7 +1,8 @@
 <html>
     <body>
         <p>Olá {{ $user->name }}!</p>
-        <p></p>
+        <p>Seu cadastro foi aprovado.</p>
+        <br>
         <p>Seja bem-vindo ao Carro Certo App, abaixo estão seus dados de acesso.</p>
         <p><strong>Usuário:</strong> {{ $user->code }}</p>
         <p><strong>Senha: </strong> 123456</p>
