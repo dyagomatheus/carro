@@ -136,9 +136,8 @@
                     @endif               
 
                         <!--Contact Form-->
-                        <form id="contact-form" method="post" action="http://www.carrocertoapp.com.br/sistema/cadastro-oficinas">
-                            <input type="hidden" name="_token" value="wC4vAu0qFVQkQFjPCRsuopQxYupZjTKlYWGRuErM">                            <div class="row clearfix">
-                                
+                        <form id="contact-form" method="post" action="{{route('register.client')}}">
+                                @csrf                                
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     
                                     <div class="form-group">
