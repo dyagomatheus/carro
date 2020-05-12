@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="col-lg-12">
+    @if(auth()->user()->admin == 1)
     <div class="card spur-card">
         <div class="card-header">
             <div class="spur-card-icon">
@@ -41,5 +42,6 @@
         <span class="alert alert-info mt-2"> Nenhuma SOLICITAÇÃO cadastrado.</span>
         @endif
     </div>
+    @endif
 </div>
 @endsection

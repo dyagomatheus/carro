@@ -58,7 +58,7 @@
                 </a>
                 @else
                 @if(auth()->user()->admin == 0)
-                <a href="{{route('car.create')}}" class="dash-nav-item">
+                <a href="{{route('car.index')}}" class="dash-nav-item">
                     <i class="fas fa-car"></i> Veículos
                 </a>
                 <a href="{{route('service.index')}}" class="dash-nav-item">
