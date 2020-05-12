@@ -19,9 +19,9 @@
                         <th scope="col">Modelo</th>
                         <th scope="col">Chassi</th>
                         <th scope="col">Ano</th>
-                        @if(auth()->user()->admin == 1)
+                        {{-- @if(auth()->user()->admin == 1)
                             <th scope="col">Ações</th>
-                        @endif
+                        @endif --}}
                     </tr>
                 </thead>
                 <tbody>
@@ -32,11 +32,11 @@
                         <td>{{$car->chassis}}</td>
                         <td>{{$car->year}}</td>
                     <td>
-                        @if(auth()->user()->admin == 1)
+                        {{-- @if(auth()->user()->admin == 1)
 
                         <a href="{{route('car.edit', $car->id)}}" class="btn btn-warning">Editar</a>
                         <a href="{{route('car.delete', $car->id)}}" class="btn btn-danger">Deletar</a>
-                        @endif
+                        @endif --}}
                     </td>
                     </tr>  
                     @endforeach
