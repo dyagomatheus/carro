@@ -25,7 +25,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">CNPJ</label>
-                                <input type="number" value="{{$client->cnpj}}" maxlength="11" class="form-control" id="cnpj" name="cnpj" disabled>
+                                <input type="text" value="{{$client->cnpj}}" placeholder="Inserir somente números" maxlength="11" class="form-control" id="cnpj" name="cnpj" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">Código</label>
@@ -35,7 +35,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputEmail4">Telefone</label>
-                                <input type="number" value="{{$client->telephone}}" class="form-control" id="telephone" name="telephone" disabled>
+                                <input type="text" value="{{$client->telephone}}" placeholder="Inserir somente números" class="form-control" id="telephone" name="telephone" disabled>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="inputPassword4">CEP</label>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="form-group col-md-2">
                                 <label for="inputPassword4">Número</label>
-                                <input type="text" value="{{$client->number}}" class="form-control" id="number" name="number" disabled>
+                                <input type="text" value="{{$client->number}}" placeholder="Inserir somente números" class="form-control" id="number" name="number" disabled>
                             </div>
                         </div>
                         <div class="form-row">
