@@ -29,7 +29,7 @@
     </div>
     <!-- fim do preloader --> 
     <div class="dash bg-light">
-        <div class="dash-nav" style="background: #EC0000; color: #fff;">
+        <div class="dash-nav" style="background: #06304a; color: #fff;">
             <header>
                 <a href="#!" class="menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -73,16 +73,10 @@
                         <a href="{{route('transaction.debit')}}" class="dash-nav-dropdown-item">Débito</a>
                     </div>
                 </div> --}}
-                    <a href="" class="dash-nav-item">
-                        <i class="fas fa-info-circle"></i> Institucional
-                    </a>
-                    <a href="" class="dash-nav-item">
-                        <i class="fas fa-info-circle"></i> Termos de Uso
-                    </a>
-                    <a href="" class="dash-nav-item">
-                        <i class="fas fa-user-shield"></i> Politica de Privacidade
-                    </a>
-                    <a href="" class="dash-nav-item">
+                    
+                    
+                    
+                    <a href="mailto:suporte@carrocertoapp.com.br" class="dash-nav-item">
                         <i class="fas fa-question-circle"></i> Solicite Suporte
                     </a>
                 @endif

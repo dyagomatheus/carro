@@ -27,7 +27,7 @@
             <div class="auto-container">
                 <div class="row clearfix">
                     <!--Logo-->
-                    <div class="col-md-3 col-sm-3 col-xs-12 logo"><a href="http://www.carrocertoapp.com.br/"><img style="margin-top: 5px; margin-bottom: 5px" src="http://www.carrocertoapp.com.br/images/logo.png" alt="Carro Certo App" title="Carro Certo App"></a></div>
+                    <div class="col-md-3 col-sm-3 col-xs-12 logo"><a href="http://www.carrocertoapp.com.br/"><img style="margin-top: 5px; margin-bottom: 5px" src="http://www.carrocertoapp.com.br/images/logo.png" alt="Carshire" title="Carro Certo App"></a></div>
                     
                     
 
@@ -59,7 +59,7 @@
             <div class="auto-container">
                 <div class="row clearfix">
                     <!--Main Menu-->
-                    <nav class="col-md-10 col-sm-12 col-xs-12 main-menu">
+                    <nav class="col-md-9 col-sm-12 col-xs-12 main-menu">
                         <div class="navbar-header">
                             <!-- Toggle Button -->      
                             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -75,7 +75,6 @@
                                 <li><a href="http://www.carrocertoapp.com.br/sobre.php">Sobre o App</a></li>
                                 <li><a href="http://www.carrocertoapp.com.br/vantagens.php">Vantagens</a></li>
                                 <li><a href="http://www.carrocertoapp.com.br/faqs.php">Perguntas frequentes</a></li>
-                                <li><a href="http://www.carrocertoapp.com.br/sistema/cadastro-oficinas">Cadastre sua Oficina</a></li>
                                 <li><a href="http://www.carrocertoapp.com.br/download.php">Baixar App</a></li>
                                 <li><a href="http://www.carrocertoapp.com.br/contato.php">Contato</a></li>
                             </ul>
@@ -84,7 +83,7 @@
                     <!--Main Menu End-->
                     
                     <!--Social Links-->
-                    <div class="col-md-2 col-sm-12 col-xs-12 social-outer">
+                    <div class="col-md-3 col-sm-12 col-xs-12 social-outer">
                         <div class="social-links text-right">
                             <a href="https://www.facebook.com/carrocertoappbr/" target="_blank" class="fa fa-facebook-f"></a>
                             <a href="https://www.instagram.com/carrocertoapp/?hl=pt-br" target="_blank" class="fa fa-instagram"></a>
@@ -153,7 +152,7 @@
 
                                     <div class="form-group">
                                         <label class="form-label">CNPJ</label>
-                                        <input type="text" name="cnpj" value="" placeholder="Inserir somente números" required="">
+                                        <input type="text" name="cnpj" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -168,11 +167,11 @@
 
                                     <div class="form-group">
                                         <label class="form-label">E-mail</label>
-                                        <input type="email" name="email" value="" required="" placeholder="Informe um email válido">
+                                        <input type="text" name="email" value="" required="" placeholder="Informe um email válido">
                                     </div>
                                     <div class="form-group">
                                         <label class="form-label">Telefone</label>
-                                        <input type="text" name="telephone" value="" placeholder="Inserir somente números com DDD" required="">
+                                        <input type="text" name="telephone" value="" placeholder="Telefone com DDD" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -185,29 +184,30 @@
 
                                 <div class="col-md-6 col-sm-12 col-xs-12">
                                     
-									<div class="form-group">
-                                        <label class="form-label">CEP</label>
-                                        <input type="text" name="zipcode" value="" id="cep" required="">
-                                    </div>
-                                    
+
                                     <div class="form-group">
                                         <label class="form-label">Cidade</label>
-                                        <input type="text" name="city" value="" id="cidade" required="">
+                                        <input type="text" name="city" value="" required="">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">Estado</label>
-                                        <input type="text" name="state" value="" id="uf" required="">
+                                        <input type="text" name="state" value="" required="">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">CEP</label>
+                                        <input type="text" name="zipcode" value="" required="">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">Rua</label>
-                                        <input type="text" name="street" value="" id="rua" required="">
+                                        <input type="text" name="street" value="" required="">
                                     </div>
 
                                     <div class="form-group">
                                         <label class="form-label">Número</label>
-                                        <input type="text" name="number" placeholder="Inserir somente números" value="" required="">
+                                        <input type="text" name="number" value="" required="">
                                     </div>
 
                                     <div class="form-group">
@@ -217,9 +217,12 @@
 
                                     <div class="form-group">
                                         <label class="form-label">Bairro</label>
-                                        <input type="text" name="district" value="" id="bairro" required="">
+                                        <input type="text" name="district" value="" required="">
                                     </div>
-    
+
+                                    
+
+                                    
                                     
                                 </div>
 
@@ -406,78 +409,6 @@ s0.parentNode.insertBefore(s1,s0);
 
   ga('create', 'UA-15521914-3', 'auto');
   ga('send', 'pageview');
-
-</script>
-
-  <!-- Adicionando JQuery -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-  crossorigin="anonymous"></script>
-
-<!-- Adicionando Javascript -->
-<script type="text/javascript" >
-
-$(document).ready(function() {
-
-  function limpa_formulário_cep() {
-      // Limpa valores do formulário de cep.
-      $("#rua").val("");
-      $("#bairro").val("");
-      $("#cidade").val("");
-      $("#uf").val("");
-  }
-  
-  //Quando o campo cep perde o foco.
-  $("#cep").blur(function() {
-
-      //Nova variável "cep" somente com dígitos.
-      var cep = $(this).val().replace(/\D/g, '');
-
-      //Verifica se campo cep possui valor informado.
-      if (cep != "") {
-
-          //Expressão regular para validar o CEP.
-          var validacep = /^[0-9]{8}$/;
-
-          //Valida o formato do CEP.
-          if(validacep.test(cep)) {
-
-              //Preenche os campos com "..." enquanto consulta webservice.
-              $("#rua").val("...");
-              $("#bairro").val("...");
-              $("#cidade").val("...");
-              $("#uf").val("...");
-
-              //Consulta o webservice viacep.com.br/
-              $.getJSON("https://viacep.com.br/ws/"+ cep +"/json/?callback=?", function(dados) {
-
-                  if (!("erro" in dados)) {
-                      //Atualiza os campos com os valores da consulta.
-                      $("#rua").val(dados.logradouro);
-                      $("#bairro").val(dados.bairro);
-                      $("#cidade").val(dados.localidade);
-                      $("#uf").val(dados.uf);
-                      $("#ibge").val(dados.ibge);
-                  } //end if.
-                  else {
-                      //CEP pesquisado não foi encontrado.
-                      limpa_formulário_cep();
-                      alert("CEP não encontrado.");
-                  }
-              });
-          } //end if.
-          else {
-              //cep é inválido.
-              limpa_formulário_cep();
-              alert("Formato de CEP inválido.");
-          }
-      } //end if.
-      else {
-          //cep sem valor, limpa formulário.
-          limpa_formulário_cep();
-      }
-  });
-});
 
 </script>
 

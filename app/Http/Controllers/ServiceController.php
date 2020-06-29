@@ -38,7 +38,15 @@ class ServiceController extends Controller
 
     public function store(Request $request)
     {
+        $request->session()->put($request->all());
+
         $client = auth()->user()->client_id;
+
+        $serviceLatest = Service::where('car_id', $request->car_id)->orderBy('created_at','desc')->first();
+
+        if($serviceLatest->current_km > $request->current_km){
+            return redirect()->back()->with('fail', 'A quilometragem atual não pode ser menor que a anterior.');
+        }
 
         $service = Service::create([
             'car_id' => $request->car_id,

@@ -18,7 +18,7 @@
                     <form action="{{route('service.store')}}" method="POST">
                         @csrf
                         <div class="row mb-3">
-                          <div class="form-group col-md-6">
+                          <div class="form-group col-md-5">
                             <label for="inputEmail4">KM Atual</label>
                             <input type="number" class="form-control" id="current_km" placeholder="KM Atual do Veículo" name="current_km">
                           </div>
@@ -31,13 +31,13 @@
                                 <tr>
                                     <td>
                                       <div class="row mb-3">
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-4">
                                           <label for="inputEmail4">Serviço</label>
                                           <input type="text" class="form-control" id="service" placeholder="Descrição do serviço" name="service[]">
                                         </div>
-                                        <div class="form-group col-md-3">
-                                          <label for="inputEmail4">Garantia</label>
-                                          <input type="text" class="form-control" id="warranty" placeholder="Tempo de Garantia" name="warranty[]">
+                                        <div class="form-group col-md-5">
+                                          <label for="inputEmail4">Garantia (somente números)</label>
+                                          <input type="text" class="form-control" id="warranty" placeholder="Inserir quantidade de meses" name="warranty[]">
                                         </div>
                                         <div class="form-group col-md-3">
                                           <label for="inputEmail4">Data de Retorno</label>

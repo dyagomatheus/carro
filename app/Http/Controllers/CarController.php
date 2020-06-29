@@ -26,6 +26,13 @@ class CarController extends Controller
 
     public function store(Request $request)
     {
+        
+        $car = Car::where('chassis', $request->chassis)->first();
+
+        if($car){
+            return redirect()->route('services.performed', $car->id)->with('success', 'Este carro já existe, cadastre um serviço');
+        }
+
         $car = Car::create($request->all());
 
         $user = User::create([
