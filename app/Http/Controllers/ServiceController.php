@@ -44,7 +44,7 @@ class ServiceController extends Controller
 
         $serviceLatest = Service::where('car_id', $request->car_id)->orderBy('created_at','desc')->first();
 
-        if($serviceLatest->current_km > $request->current_km){
+        if($serviceLatest['current_km'] > $request->current_km){
             return redirect()->back()->with('fail', 'A quilometragem atual não pode ser menor que a anterior.');
         }
 

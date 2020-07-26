@@ -31,9 +31,13 @@
                                 <tr>
                                     <td>
                                       <div class="row mb-3">
-                                        <div class="form-group col-md-4">
+                                        <div class="form-group col-md-2">
                                           <label for="inputEmail4">Serviço</label>
                                           <input type="text" class="form-control" id="service" placeholder="Descrição do serviço" name="service[]">
+                                        </div>
+                                        <div class="form-group col-md-2">
+                                          <label for="inputEmail4">Marca</label>
+                                          <input type="text" class="form-control" id="brand" placeholder="Marca" name="brand[]">
                                         </div>
                                         <div class="form-group col-md-5">
                                           <label for="inputEmail4">Garantia (somente números)</label>

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ServicePerformed extends Model
 {
-    protected $fillable = ['warranty', 'description', 'service_id'];
+    protected $fillable = ['warranty', 'description', 'service_id', 'brand'];
     protected $table = 'services_performeds';
 
     public function service()
