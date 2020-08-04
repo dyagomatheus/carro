@@ -13,13 +13,12 @@ class CarController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Car $car)
+    public function index()
     {
         $user = auth()->user();
+        $car = $user->car;
 
-        $car = $user->with('car');
-
-        return response()->json($car);
+        return response()->json($user);
     }
 
     /**
