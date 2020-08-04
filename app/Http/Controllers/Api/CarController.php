@@ -17,7 +17,7 @@ class CarController extends Controller
     {
         $user = auth()->user();
 
-        $car = $user;
+        $car = $user->with('car');
 
         return response()->json($car);
     }
