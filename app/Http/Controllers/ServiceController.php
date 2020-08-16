@@ -58,7 +58,8 @@ class ServiceController extends Controller
             $servicePerformed = ServicePerformed::create([
                 'warranty' => $request->warranty[$i],
                 'description' => $request->service[$i],
-                'return_date' => $request->return_date[$i],
+                'return_km' => $request->return_km[$i],
+                'brand' => $request->brand[$i],
                 'service_id' => $service->id,
             ]);
         }

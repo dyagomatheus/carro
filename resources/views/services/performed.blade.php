@@ -44,8 +44,8 @@
                                           <input type="text" class="form-control" id="warranty" placeholder="Inserir quantidade de meses" name="warranty[]">
                                         </div>
                                         <div class="form-group col-md-3">
-                                          <label for="inputEmail4">Data de Retorno</label>
-                                          <input type="date" class="form-control" id="return_date" placeholder="Tempo de Garantia" name="return_date[]">
+                                          <label for="inputEmail4">KM Retorno</label>
+                                          <input type="number" class="form-control" id="return_km" placeholder="Apenas números" name="return_km[]">
                                         </div>
                                       </div>
                                       

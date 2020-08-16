@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddBrandInServicesPerformedsTable extends Migration
+class AddReturnKmInServicesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,7 +14,7 @@ class AddBrandInServicesPerformedsTable extends Migration
     public function up()
     {
         Schema::table('services_performeds', function (Blueprint $table) {
-            $table->string('brand')->nullable();
+            $table->integer('return_km')->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddBrandInServicesPerformedsTable extends Migration
     public function down()
     {
         Schema::table('services_performeds', function (Blueprint $table) {
-            $table->string('brand', 100)->nullable();
+            //
         });
     }
 }

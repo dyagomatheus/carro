@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Service;
 use App\Models\ServicePerformed;
+use App\User;
 
 class HistoryController extends Controller
 {
@@ -30,11 +31,12 @@ class HistoryController extends Controller
      */
     public function notifications(ServicePerformed $performed)
     {
-        $user = auth()->user();
+        $user = \Auth::user();
         $date = getdate();
 
-        $performeds = $performed->whereMonth('return_date', $date['mon'])->whereYear('return_date', $date['year'])
-        ->with('service.client', 'service.car')->get();
+        $performeds = $performed->whereHas('service', function($join) use ($user){
+            $join->where('services.car_id', $user->car_id);
+        })->get();
 
         return response()->json($performeds, 200);
     }

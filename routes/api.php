@@ -12,11 +12,12 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+Route::get('notifications', 'Api\HistoryController@notifications');
+
 Route::group(['middleware' => ['api', 'auth:api']], function () {
     Route::get('history', 'Api\HistoryController@index');
     Route::get('clients', 'Api\ClientController@index');
     Route::get('mycar', 'Api\CarController@index');
-    Route::get('notifications', 'Api\HistoryController@notifications');
     Route::get('schedules', 'Api\ScheduleController@index');
     Route::put('user/{id}/update', 'Api\UserController@update');
 
